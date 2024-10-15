@@ -19,6 +19,7 @@ const Pagination = ({
             {generateArray(pageCount)
                 .map(i => 
                     <button 
+                        key={i}
                         className={`${page === (i + 1) ? 'font-bold text-orange-500' : 'font-normal'}`} 
                         onClick={() => onChangePage(i + 1)}
                     >
