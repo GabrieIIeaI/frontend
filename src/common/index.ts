@@ -1,5 +1,12 @@
 import { AxiosResponse } from "axios"
 
+/**
+ * Função que é responsável por receber uma chamada API e retornar o dada
+ * - Ajuda a não repassar dados que não precisam ser usados no front
+ * @param promiseApi Função que realiza a chamada API
+ * @param filters Filtros para a chamada caso existam
+ * @returns Retorna os dados da chamada API contendo apenas o data
+ */
 export const asyncPromiseApi = async <TData, TFilters>(
     promiseApi: (filters?: TFilters) => Promise<AxiosResponse<TData>>,
     filters?: TFilters
